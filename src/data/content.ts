@@ -25,7 +25,7 @@ export const places = [
 ] as const;
 
 export const rates = [
-  { name: "Private", sixty: "$65", thirty: "$35", note: "" },
+  { name: "Private", sixty: "$65", thirty: "$35", note: "1-on-1" },
   { name: "Semi-private", sixty: "$40", thirty: "$20", note: "per person" },
   { name: "Group", sixty: "$20", thirty: "$20", note: "per person" },
 ] as const;

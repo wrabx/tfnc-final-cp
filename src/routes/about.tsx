@@ -10,11 +10,11 @@ function About() {
       <article className="mx-auto grid max-w-6xl gap-10 px-5 py-12 md:grid-cols-12 md:py-16">
         <div className="order-2 md:order-1 md:col-span-5">
           <img
-            src="/images/grayson.jpg"
-            alt="Grayson Brown"
-            className="max-h-screen w-full rounded-card object-cover object-top"
-            width={912}
-            height={1400}
+            src="/images/grayson.jpg?v=4"
+            alt="Grayson Brown with his dog"
+            className="w-full rounded-card"
+            width={432}
+            height={411}
           />
         </div>
         <div className="order-1 md:order-2 md:col-span-7">
