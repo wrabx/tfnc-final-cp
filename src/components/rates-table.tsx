@@ -25,6 +25,9 @@ export function RatesTable() {
             <tr key={row.name} className="border-t border-line">
               <th scope="row" className="px-4 py-4 font-semibold text-ink">
                 {row.name}
+                {row.note ? (
+                  <span className="mt-0.5 block text-xs font-medium text-muted">{row.note}</span>
+                ) : null}
               </th>
               <td className="px-4 py-4 text-lg font-semibold tabular-nums">{row.sixty}</td>
               <td className="px-4 py-4 text-lg font-semibold tabular-nums">{row.thirty}</td>
