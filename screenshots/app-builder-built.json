@@ -1,0 +1,41 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Travel Fitness LLC — Bringing the gym to you",
+      "hasCanvas": false,
+      "bodyTextLen": 1696,
+      "bodyTextHash": "1e93a6d69b86b6e67bbdf45dc6caed4dace9786bf138f84085bc18011df9ead3",
+      "bodyTextPrefix": "Skip to content Travel Fitness LLC Home Services About Contact R",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Travel Fitness LLC — Bringing the gym to you",
+      "hasCanvas": false,
+      "bodyTextLen": 1683,
+      "bodyTextHash": "138d05273bb06fada76d1c036d54e12b43a17dc0fe60a3b72cb1dc81f1da28ae",
+      "bodyTextPrefix": "Skip to content Travel Fitness LLC Open menu NORTH CAROLINA TRIA",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": true,
+  "baselineReasons": [
+    "desktop: body text replaced (similar length, page start changed)",
+    "mobile: body text replaced (similar length, page start changed)"
+  ]
+}

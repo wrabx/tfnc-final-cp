@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Travel Fitness LLC — Bringing the gym to you",
+      "hasCanvas": false,
+      "bodyTextLen": 1708,
+      "bodyTextHash": "085503afd6da0ddec4111218f00037bec0087029a7133b06904415fd9181d97e",
+      "bodyTextPrefix": "Skip to content Travel Fitness LLC · EST. 2025 Home Services Abo",
+      "horizontalOverflow": false,
+      "consoleErrors": [
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <SafeFragment fallback={null}>\n      <CatchBoundary getResetKey={function getResetKey} errorComponent={function AppErrorComponent} ...>\n        <SafeFragment fallback={function fallback}>\n          <MatchInnerImpl match={{id:\"//\",ssr:true, ...}}>\n            <Lazy>\n              <Home>\n                <SiteFrame>\n                  <div className=\"pb-24 md:pb-0\">\n                    <a>\n                    <SiteHeader>\n                    <main id=\"main\">\n                      <section>\n                      <section>\n                      <section>\n                      <section>\n                      <section id=\"visit\" className=\"scroll-mt-20\">\n                        <div className=\"mx-auto gr...\">\n                          <div>\n                          <InquiryForm>\n                            <form onSubmit={function onSubmit} noValidate={true} className=\"grid gap-4\">\n                              <Field label=\"Full name\" error={undefined} htmlFor=\"name\">\n                                <label htmlFor=\"name\" className=\"grid gap-2...\">\n                                  <input\n                                    id=\"name\"\n                                    name=\"name\"\n                                    autoComplete=\"name\"\n                                    value=\"\"\n                                    onChange={function onChange}\n                                    className=\"h-12 w-full rounded-xl border bg-cream px-4 text-base text-ink placehol...\"\n-                                   style={{caret-color:\"transparent\"}}\n                                  >\n                              <div className=\"grid gap-4...\">\n                                <Field label=\"Phone\" error={undefined} htmlFor=\"phone\">\n                                  <label htmlFor=\"phone\" className=\"grid gap-2...\">\n                                    <input\n                                      id=\"phone\"\n                                      name=\"phone\"\n                                      type=\"tel\"\n                                      autoComplete=\"tel\"\n                                      inputMode=\"tel\"\n                                      value=\"\"\n                                      onChange={function onChange}\n                                      className=\"h-12 w-full rounded-xl border bg-cream px-4 text-base text-ink placeh...\"\n-                                     style={{caret-color:\"transparent\"}}\n                                    >\n                                <Field label=\"Email\" error={undefined} htmlFor=\"email\">\n                                  <label htmlFor=\"email\" className=\"grid gap-2...\">\n                                    <input\n                                      id=\"email\"\n                                      name=\"email\"\n                                      type=\"email\"\n                                      autoComplete=\"email\"\n                                      inputMode=\"email\"\n                                      value=\"\"\n                                      onChange={function onChange}\n                                      className=\"h-12 w-full rounded-xl border bg-cream px-4 text-base text-ink placeh...\"\n-                                     style={{caret-color:\"transparent\"}}\n                                    >\n                              <div>\n                              <Field label=\"Subject\" error={undefined} htmlFor=\"note\">\n                                <label htmlFor=\"note\" className=\"grid gap-2...\">\n                                  <textarea\n                                    id=\"note\"\n                                    name=\"note\"\n                                    rows={4}\n                                    value=\"\"\n                                    onChange={function onChange}\n                                    className=\"min-h-32 py-3 w-full rounded-xl border bg-cream px-4 text-base text-ink...\"\n                                    placeholder=\"Goals, schedule, injuries the trainer should know about…\"\n-                                   style={{caret-color:\"transparent\"}}\n                                  >\n                              ...\n                    ...\n"
+      ],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Travel Fitness LLC — Bringing the gym to you",
+      "hasCanvas": false,
+      "bodyTextLen": 1695,
+      "bodyTextHash": "faeecd3c2bc7b0906cba9936cd68c8f0ca7d5bd504e14a35834500f1fde5a04f",
+      "bodyTextPrefix": "Skip to content Travel Fitness LLC · EST. 2025 Open menu NORTH C",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
