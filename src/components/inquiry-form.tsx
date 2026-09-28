@@ -1,17 +1,8 @@
 import { useState } from "react";
-import { z } from "zod";
-import { email, places, services } from "@/data/content";
+import { email, phoneDisplay, places, services } from "@/data/content";
+import { inquirySchema, submitInquiry, type Inquiry } from "@/lib/inquiry";
 
-const schema = z.object({
-  name: z.string().trim().min(2, "Add your name."),
-  email: z.string().trim().email("Use a real email."),
-  phone: z.string().trim().min(7, "Add a phone number.").max(20, "That number looks too long."),
-  service: z.string().min(1, "Pick a service."),
-  place: z.string().min(1, "Pick where to meet."),
-  note: z.string().trim().max(500, "Keep the note under 500 characters."),
-});
-
-type Fields = z.infer<typeof schema>;
+type Fields = Inquiry;
 type Errors = Partial<Record<keyof Fields, string>>;
 
 const empty: Fields = {
@@ -45,15 +36,17 @@ export function InquiryForm() {
   const [fields, setFields] = useState<Fields>(empty);
   const [errors, setErrors] = useState<Errors>({});
   const [sent, setSent] = useState<Fields | null>(null);
+  const [pending, setPending] = useState(false);
+  const [formError, setFormError] = useState<string | null>(null);
 
   function update<K extends keyof Fields>(key: K, value: Fields[K]) {
     setFields((current) => ({ ...current, [key]: value }));
     setErrors((current) => ({ ...current, [key]: undefined }));
   }
 
-  function onSubmit(event: React.FormEvent) {
+  async function onSubmit(event: React.FormEvent) {
     event.preventDefault();
-    const parsed = schema.safeParse(fields);
+    const parsed = inquirySchema.safeParse(fields);
     if (!parsed.success) {
       const next: Errors = {};
       for (const issue of parsed.error.issues) {
@@ -65,36 +58,36 @@ export function InquiryForm() {
       setErrors(next);
       return;
     }
-    setSent(parsed.data);
-    window.location.href = mailto(parsed.data);
+    setPending(true);
+    setFormError(null);
+    try {
+      const result = await submitInquiry({ data: parsed.data });
+      if (result.ok) {
+        setSent(parsed.data);
+        return;
+      }
+      if (result.reason === "busy") {
+        setFormError("The inbox is busy. Wait a minute and try again, or email us directly.");
+      } else {
+        setFormError(`That did not send. Try again, or email ${email}.`);
+      }
+    } catch {
+      setFormError(`That did not send. Try again, or email ${email}.`);
+    } finally {
+      setPending(false);
+    }
   }
 
   if (sent) {
     return (
       <div className="rounded-card border border-line bg-paper p-6">
-        <h3 className="font-display text-3xl">Ready to send, {sent.name.split(" ")[0]}.</h3>
+        <h3 className="font-display text-3xl">Sent, {sent.name.split(" ")[0]}.</h3>
         <p className="mt-3 text-muted">
-          Your email app should open a message to {email}. If it did not, use the button below
-          or call (936) 499-0032.
+          This request went to {email}. Grayson will be in touch. You can also call {phoneDisplay}.
         </p>
         <pre className="mt-5 overflow-x-auto rounded-xl bg-cream p-4 text-sm leading-relaxed">
           {message(sent)}
         </pre>
-        <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-          <a
-            href={mailto(sent)}
-            className="inline-flex h-12 items-center justify-center rounded-full bg-pine px-5 text-sm font-semibold text-cream"
-          >
-            Open email
-          </a>
-          <button
-            type="button"
-            onClick={() => setSent(null)}
-            className="inline-flex h-12 items-center justify-center rounded-full border border-line px-5 text-sm font-semibold"
-          >
-            Edit request
-          </button>
-        </div>
       </div>
     );
   }
@@ -182,11 +175,20 @@ export function InquiryForm() {
           placeholder="Goals, schedule, injuries the trainer should know about…"
         />
       </Field>
+      {formError ? (
+        <p className="text-sm text-clay" role="alert">
+          {formError}{" "}
+          <a className="underline" href={mailto(fields)}>
+            Open an email instead
+          </a>
+        </p>
+      ) : null}
       <button
         type="submit"
-        className="inline-flex h-12 items-center justify-center rounded-full bg-pine px-6 text-sm font-semibold text-cream"
+        disabled={pending}
+        className="inline-flex h-12 items-center justify-center rounded-full bg-pine px-6 text-sm font-semibold text-cream disabled:opacity-60"
       >
-        Send request
+        {pending ? "Sending…" : "Send request"}
       </button>
     </form>
   );

@@ -1,4 +1,4 @@
-import { email, hours, phoneDisplay, phoneHref, youtube } from "@/data/content";
+import { cities, email, hours, phoneDisplay, phoneHref, youtube } from "@/data/content";
 import { YoutubeLogo } from "@/components/youtube-logo";
 
 export function SiteFooter() {
@@ -7,7 +7,9 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-8 px-5 py-10 sm:grid-cols-3">
         <div>
           <p className="font-display text-2xl">Travel Fitness LLC</p>
-          <p className="mt-2 text-sm text-foam">Bringing the gym to you. North Carolina Triad.</p>
+          <p className="mt-2 text-sm text-foam">
+            Bringing the gym to you. {cities}.
+          </p>
         </div>
         <div>
           <p className="text-sm font-semibold uppercase tracking-widest text-foam">Hours</p>

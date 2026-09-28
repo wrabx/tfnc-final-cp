@@ -62,3 +62,21 @@
     }
   }
 }
+
+a.rounded-full,
+button.rounded-full {
+  transition:
+    background-color 150ms ease,
+    color 150ms ease,
+    border-color 150ms ease;
+}
+
+a.rounded-full.bg-pine:hover:not(:disabled),
+button.rounded-full.bg-pine:hover:not(:disabled),
+a.rounded-full.border-ink:hover,
+button.rounded-full.border-ink:hover,
+button.rounded-full.bg-cream:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}

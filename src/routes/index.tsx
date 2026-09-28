@@ -1,6 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { email, phoneDisplay, phoneHref, youtube } from "@/data/content";
-import { YoutubeLogo } from "@/components/youtube-logo";
+import { cities, email, phoneDisplay, phoneHref } from "@/data/content";
 import { InquiryForm } from "@/components/inquiry-form";
 import { RatesTable } from "@/components/rates-table";
 import { SiteFrame } from "@/components/site-frame";
@@ -19,20 +18,20 @@ function Home() {
             Bringing the gym to you.
           </h1>
           <p className="mt-5 max-w-xl text-lg text-muted">
-            Convenient fitness for the Triad. Custom plans at your home, at
-            Lawndale Swim & Tennis Club, or through virtual coaching and online
-            programming.
+            In-home training in {cities}. Sessions at your home, at Lawndale
+            Swim & Tennis Club in Greensboro, or through virtual coaching and
+            online programming.
           </p>
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-7 flex flex-row flex-nowrap items-center gap-2">
             <a
               href="#visit"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-pine px-6 text-sm font-semibold text-cream"
+              className="inline-flex h-11 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-pine px-3 text-xs font-semibold text-cream sm:h-12 sm:px-6 sm:text-sm"
             >
               Request a consultation
             </a>
             <Link
               to="/services"
-              className="inline-flex h-12 items-center justify-center rounded-full border border-ink px-6 text-sm font-semibold"
+              className="inline-flex h-11 shrink-0 items-center justify-center whitespace-nowrap rounded-full border border-ink px-3 text-xs font-semibold sm:h-12 sm:px-6 sm:text-sm"
             >
               See services & rates
             </Link>
@@ -56,7 +55,7 @@ function Home() {
             ["1-on-1 training", "Your home, or Lawndale Swim & Tennis Club. Equipment comes with the trainer."],
             ["Partner & group", "Expert guidance at a lower rate, with room to train together."],
           ].map(([title, copy]) => (
-            <article key={title} className="border-t border-foam/30 pt-4">
+            <article key={title} className="border-t border-foam/30 pt-4 text-center">
               <h2 className="font-display text-2xl">{title}</h2>
               <p className="mt-2 text-sm text-cream">{copy}</p>
             </article>
@@ -81,7 +80,10 @@ function Home() {
             bringing that same work to the Triad. Science-backed plans, clear
             coaching, and sessions that fit a real week.
           </p>
-          <Link to="/about" className="mt-6 inline-flex h-12 items-center text-sm font-semibold text-pine">
+          <Link
+            to="/about"
+            className="mt-6 inline-flex h-12 w-fit items-center justify-center rounded-full border border-ink px-6 text-sm font-semibold"
+          >
             About Grayson
           </Link>
         </div>
@@ -95,8 +97,11 @@ function Home() {
               Private, semi-private, or group. Thirty or sixty minutes. No
               membership required.
             </p>
-            <Link to="/services" className="mt-6 inline-flex h-12 items-center text-sm font-semibold text-pine">
-              Full service details
+            <Link
+              to="/services"
+              className="mt-6 inline-flex h-12 w-fit items-center justify-center rounded-full border border-ink px-6 text-sm font-semibold"
+            >
+              Services
             </Link>
           </div>
           <RatesTable />
@@ -120,12 +125,6 @@ function Home() {
             <p>
               <a className="font-medium" href={`mailto:${email}`}>
                 {email}
-              </a>
-            </p>
-            <p className="mt-3">
-              <a className="inline-flex items-center gap-2 font-semibold text-pine" href={youtube} target="_blank" rel="noopener noreferrer">
-                <YoutubeLogo />
-                Watch on YouTube
               </a>
             </p>
           </div>

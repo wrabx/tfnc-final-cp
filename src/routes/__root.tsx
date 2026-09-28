@@ -14,7 +14,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Personal training in the North Carolina Triad. At-home, Lawndale Swim & Tennis Club, virtual sessions, and online programming with Grayson Brown.",
+          "In-home personal training in Winston-Salem, Greensboro, and High Point. Lawndale Swim & Tennis Club, virtual sessions, and online programming with Grayson Brown.",
       },
       { name: "theme-color", content: "#1c72c0" },
     ],

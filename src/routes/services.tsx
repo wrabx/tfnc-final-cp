@@ -1,4 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
+import { cities } from "@/data/content";
 import { InquiryForm } from "@/components/inquiry-form";
 import { RatesTable } from "@/components/rates-table";
 import { SiteFrame } from "@/components/site-frame";
@@ -39,8 +40,9 @@ function Services() {
           Personalized training that fits the week you actually have.
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-muted">
-          Face-to-face guidance, virtual sessions, or flexible online programs.
-          One option for the goal, not a stack of packages.
+          In-home visits in {cities}. Face-to-face guidance, virtual sessions,
+          or flexible online programs. One option for the goal, not a stack of
+          packages.
         </p>
       </section>
 

@@ -33,7 +33,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5">
         <Link to="/" className="flex min-w-0 items-center gap-2.5" onClick={() => setOpen(false)}>
           <img src="/images/mark.png?v=3" alt="" className="h-12 w-auto shrink-0" width={446} height={360} />
-          <span className="truncate whitespace-nowrap font-display text-base tracking-tight sm:text-lg">
+          <span className="truncate whitespace-nowrap font-display text-xl tracking-tight sm:text-2xl">
             Travel Fitness LLC
           </span>
         </Link>
