@@ -65,11 +65,11 @@ function Home() {
 
       <section className="mx-auto grid max-w-6xl items-center gap-8 px-5 py-14 md:grid-cols-2 md:py-20">
         <img
-          src="/images/grayson.jpg?v=4"
+          src="/images/grayson.jpg?v=7"
           alt="Grayson Brown with his dog"
           className="w-full rounded-card"
-          width={432}
-          height={411}
+          width={513}
+          height={510}
         />
         <div>
           <p className="text-sm font-semibold uppercase tracking-widest text-pine">Coach</p>
