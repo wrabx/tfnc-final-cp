@@ -66,7 +66,9 @@ export function InquiryForm() {
         setSent(parsed.data);
         return;
       }
-      if (result.reason === "busy") {
+      if (result.reason === "activation") {
+        setFormError("FormSubmit sent a confirmation to rhebrown22@gmail.com. Open that email, confirm the address, then send this request again.");
+      } else if (result.reason === "busy") {
         setFormError("The inbox is busy. Wait a minute and try again, or email us directly.");
       } else {
         setFormError(`That did not send. Try again, or email ${email}.`);
@@ -83,7 +85,8 @@ export function InquiryForm() {
       <div className="rounded-card border border-line bg-paper p-6">
         <h3 className="font-display text-3xl">Sent, {sent.name.split(" ")[0]}.</h3>
         <p className="mt-3 text-muted">
-          This request went to {email}. Grayson will be in touch. You can also call {phoneDisplay}.
+          Test send only. This request went to rhebrown22@gmail.com, not the public inbox.
+          Check that inbox and spam. You can also call {phoneDisplay}.
         </p>
         <pre className="mt-5 overflow-x-auto rounded-xl bg-cream p-4 text-sm leading-relaxed">
           {message(sent)}
