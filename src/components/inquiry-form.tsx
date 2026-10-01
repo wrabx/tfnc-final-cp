@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { email, phoneDisplay, places, services } from "@/data/content";
-import { inquirySchema, submitInquiry, type Inquiry } from "@/lib/inquiry";
+import { inquirySchema, type Inquiry } from "@/lib/inquiry";
 
 type Fields = Inquiry;
 type Errors = Partial<Record<keyof Fields, string>>;
@@ -61,20 +61,39 @@ export function InquiryForm() {
     setPending(true);
     setFormError(null);
     try {
-      const result = await submitInquiry({ data: parsed.data });
-      if (result.ok) {
+      const response = await fetch("https://formsubmit.co/ajax/rhebrown22@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: parsed.data.name,
+          email: parsed.data.email,
+          _replyto: parsed.data.email,
+          _subject: `Consultation request — ${parsed.data.service}`,
+          _template: "box",
+          _captcha: "false",
+          _url: "https://tfnc-test.grok.me/",
+          phone: parsed.data.phone,
+          service: parsed.data.service,
+          where: parsed.data.place,
+          message: parsed.data.note || "(no note)",
+        }),
+      });
+      const body = (await response.json().catch(() => null)) as { success?: boolean | string; message?: string } | null;
+      const accepted = response.ok && (body?.success === true || body?.success === "true");
+      if (accepted) {
         setSent(parsed.data);
         return;
       }
-      if (result.reason === "activation") {
-        setFormError("FormSubmit sent a confirmation to rhebrown22@gmail.com. Open that email, confirm the address, then send this request again.");
-      } else if (result.reason === "busy") {
-        setFormError("The inbox is busy. Wait a minute and try again, or email us directly.");
+      const detail = body?.message ?? `FormSubmit returned ${response.status}.`;
+      if (/activat/i.test(detail)) {
+        setFormError("FormSubmit needs a one-time confirmation. Check rhebrown22@gmail.com, including spam, click Activate Form, then send this request again.");
+      } else if (response.status === 429 || /rate limit/i.test(detail)) {
+        setFormError("FormSubmit is rate-limiting this inbox. Wait a few minutes, then send again.");
       } else {
-        setFormError(`That did not send. Try again, or email ${email}.`);
+        setFormError(`${detail} You can also email ${email}.`);
       }
     } catch {
-      setFormError(`That did not send. Try again, or email ${email}.`);
+      setFormError(`The form service did not respond. Try again, or email ${email}.`);
     } finally {
       setPending(false);
     }
