@@ -15,15 +15,15 @@ function Home() {
           <p className="hero-rise text-sm font-semibold uppercase tracking-widest text-pine">
             North Carolina Triad
           </p>
-          <h1 className="hero-rise mt-3 font-display text-5xl leading-none md:text-6xl" style={{ animationDelay: "80ms" }}>
+          <h1 className="hero-rise mt-3 font-display text-5xl leading-none md:text-6xl" style={{ animationDelay: "240ms" }}>
             Bringing the gym to you.
           </h1>
-          <p className="hero-rise mt-5 max-w-xl text-lg text-muted" style={{ animationDelay: "140ms" }}>
+          <p className="hero-rise mt-5 max-w-xl text-lg text-muted" style={{ animationDelay: "240ms" }}>
             In-home training in {cities}. Sessions at your home, at Lawndale
             Swim & Tennis Club in Greensboro, or through virtual coaching and
             online programming.
           </p>
-          <div className="hero-rise mt-7 flex flex-row flex-nowrap items-center gap-2" style={{ animationDelay: "200ms" }}>
+          <div className="hero-rise mt-7 flex flex-row flex-nowrap items-center gap-2" style={{ animationDelay: "360ms" }}>
             <a
               href="#visit"
               className="inline-flex h-11 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-pine px-3 text-xs font-semibold text-cream sm:h-12 sm:px-6 sm:text-sm"
@@ -43,7 +43,7 @@ function Home() {
             src="/images/mark.png?v=3"
             alt="Travel Fitness LLC logo"
             className="hero-rise w-full max-w-md"
-            style={{ animationDelay: "120ms" }}
+            style={{ animationDelay: "200ms" }}
             width={446}
             height={360}
           />
@@ -57,7 +57,7 @@ function Home() {
             ["1-on-1 training", "Your home, or Lawndale Swim & Tennis Club. Equipment comes with the trainer."],
             ["Partner & group", "Expert guidance at a lower rate, with room to train together."],
           ].map(([title, copy], index) => (
-            <Reveal key={title} delay={index * 80}>
+            <Reveal key={title} delay={index * 140}>
               <article className="border-t border-foam/30 pt-4 text-center">
                 <h2 className="font-display text-2xl">{title}</h2>
                 <p className="mt-2 text-sm text-cream">{copy}</p>
@@ -77,7 +77,7 @@ function Home() {
             height={510}
           />
         </Reveal>
-        <Reveal delay={80}>
+        <Reveal delay={160}>
           <p className="text-sm font-semibold uppercase tracking-widest text-pine">Coach</p>
           <h2 className="mt-3 font-display text-4xl">Grayson Brown</h2>
           <p className="mt-1 text-muted">Owner / Personal Trainer · NASM CPT · CPR/AED</p>
@@ -110,7 +110,7 @@ function Home() {
               Services
             </Link>
           </Reveal>
-          <Reveal delay={80}>
+          <Reveal delay={160}>
             <RatesTable />
           </Reveal>
         </div>

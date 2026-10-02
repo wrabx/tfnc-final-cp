@@ -63,7 +63,7 @@ function Services() {
 
       <section className="mx-auto grid max-w-6xl gap-6 px-5 py-12 md:py-16">
         {offers.map((offer, index) => (
-          <Reveal key={offer.title} delay={index * 70}>
+          <Reveal key={offer.title} delay={index * 140}>
           <article
             className="grid overflow-hidden rounded-card border border-line bg-cream md:grid-cols-2"
           >
