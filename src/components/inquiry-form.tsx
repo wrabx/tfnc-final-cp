@@ -155,6 +155,13 @@ export function InquiryForm() {
             inputMode="email"
             value={fields.email}
             onChange={(event) => update("email", event.target.value)}
+            onBlur={() => {
+              const value = fields.email.trim();
+              if (!value) return;
+              if (!/^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/.test(value)) {
+                setErrors((current) => ({ ...current, email: "Enter a valid email, like name@email.com." }));
+              }
+            }}
             className={controlClass(Boolean(errors.email))}
           />
         </Field>
