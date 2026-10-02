@@ -5,12 +5,10 @@ import { inquirySchema, type Inquiry } from "@/lib/inquiry";
 type Fields = Inquiry;
 type Errors = Partial<Record<keyof Fields, string>>;
 
-const phoneMask = "   -   -    ";
-
 const empty: Fields = {
   name: "",
   email: "",
-  phone: phoneMask,
+  phone: "",
   service: "",
   place: "",
   note: "",
@@ -18,8 +16,9 @@ const empty: Fields = {
 
 function formatPhone(value: string) {
   const digits = value.replace(/\D/g, "").slice(0, 10);
-  const slots = digits.padEnd(10, " ").split("");
-  return `${slots.slice(0, 3).join("")}-${slots.slice(3, 6).join("")}-${slots.slice(6).join("")}`;
+  if (digits.length < 4) return digits;
+  if (digits.length < 7) return `${digits.slice(0, 3)}-${digits.slice(3)}`;
+  return `${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
 }
 
 function message(fields: Fields) {
