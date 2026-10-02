@@ -5,7 +5,7 @@ import { email } from "@/data/content";
 export const inquirySchema = z.object({
   name: z.string().trim().min(2, "Add your name."),
   email: z.string().trim().email("Use a real email."),
-  phone: z.string().trim().min(7, "Add a phone number.").max(20, "That number looks too long."),
+  phone: z.string().trim().regex(/^\d{3}-\d{3}-\d{4}$/, "Use a 10-digit phone number."),
   service: z.string().min(1, "Pick a service."),
   place: z.string().min(1, "Pick where to meet."),
   note: z.string().trim().max(500, "Keep the note under 500 characters."),

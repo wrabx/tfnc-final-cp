@@ -14,6 +14,13 @@ const empty: Fields = {
   note: "",
 };
 
+function formatPhone(value: string) {
+  const digits = value.replace(/\D/g, "").slice(0, 10);
+  if (digits.length < 4) return digits;
+  if (digits.length < 7) return `${digits.slice(0, 3)}-${digits.slice(3)}`;
+  return `${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
+}
+
 function message(fields: Fields) {
   return [
     `Name: ${fields.name}`,
@@ -132,9 +139,11 @@ export function InquiryForm() {
             name="phone"
             type="tel"
             autoComplete="tel"
-            inputMode="tel"
+            inputMode="numeric"
+            maxLength={12}
+            placeholder="936-321-2135"
             value={fields.phone}
-            onChange={(event) => update("phone", event.target.value)}
+            onChange={(event) => update("phone", formatPhone(event.target.value))}
             className={controlClass(Boolean(errors.phone))}
           />
         </Field>
