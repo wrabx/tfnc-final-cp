@@ -18,12 +18,7 @@ export function SiteHeader() {
       if (event.key === "Escape") setOpen(false);
     };
     document.addEventListener("keydown", onKey);
-    const previous = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = previous;
-    };
+    return () => document.removeEventListener("keydown", onKey);
   }, [open]);
 
   return (
@@ -67,35 +62,43 @@ export function SiteHeader() {
           onClick={() => setOpen((value) => !value)}
         >
           <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
-          {open ? <X className="size-5" /> : <Menu className="size-5" />}
+          <span className="relative size-5">
+            <Menu className={`absolute inset-0 size-5 transition duration-200 ${open ? "rotate-90 opacity-0" : "opacity-100"}`} />
+            <X className={`absolute inset-0 size-5 transition duration-200 ${open ? "opacity-100" : "-rotate-90 opacity-0"}`} />
+          </span>
         </button>
       </div>
 
-      {open ? (
-        <nav
-          id="mobile-nav"
-          className="fixed inset-x-0 bottom-0 top-16 z-50 flex flex-col overflow-y-auto overscroll-contain bg-paper px-5 pt-6 md:hidden"
-          aria-label="Mobile"
-        >
-          {links.map((link) => (
-            <Link
-              key={link.label}
-              to={link.to}
-              hash={link.hash}
-              className="flex h-14 items-center border-b border-line font-display text-3xl"
-              onClick={() => setOpen(false)}
+      <nav
+        id="mobile-nav"
+        className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out md:hidden ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+        aria-label="Mobile"
+        aria-hidden={!open}
+      >
+        <div className="overflow-hidden">
+          <div className="flex flex-col px-5 pb-5">
+            {links.map((link) => (
+              <Link
+                key={link.label}
+                to={link.to}
+                hash={link.hash}
+                className="flex h-14 items-center border-b border-line font-display text-3xl"
+                tabIndex={open ? 0 : -1}
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <a
+              href="tel:+19364990032"
+              className="mt-4 inline-flex h-12 items-center justify-center rounded-full bg-pine text-base font-semibold text-cream"
+              tabIndex={open ? 0 : -1}
             >
-              {link.label}
-            </Link>
-          ))}
-          <a
-            href="tel:+19364990032"
-            className="mt-4 inline-flex h-12 items-center justify-center rounded-full bg-pine text-base font-semibold text-cream"
-          >
-            Call (936) 499-0032
-          </a>
-        </nav>
-      ) : null}
+              Call (936) 499-0032
+            </a>
+          </div>
+        </div>
+      </nav>
     </header>
   );
 }

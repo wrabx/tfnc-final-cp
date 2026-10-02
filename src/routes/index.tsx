@@ -11,18 +11,18 @@ function Home() {
     <SiteFrame>
       <section className="mx-auto grid max-w-6xl items-center gap-8 px-5 py-10 md:grid-cols-2 md:py-16">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-widest text-pine">
+          <p className="hero-rise text-sm font-semibold uppercase tracking-widest text-pine">
             North Carolina Triad
           </p>
-          <h1 className="mt-3 font-display text-5xl leading-none md:text-6xl">
+          <h1 className="hero-rise mt-3 font-display text-5xl leading-none md:text-6xl" style={{ animationDelay: "80ms" }}>
             Bringing the gym to you.
           </h1>
-          <p className="mt-5 max-w-xl text-lg text-muted">
+          <p className="hero-rise mt-5 max-w-xl text-lg text-muted" style={{ animationDelay: "140ms" }}>
             In-home training in {cities}. Sessions at your home, at Lawndale
             Swim & Tennis Club in Greensboro, or through virtual coaching and
             online programming.
           </p>
-          <div className="mt-7 flex flex-row flex-nowrap items-center gap-2">
+          <div className="hero-rise mt-7 flex flex-row flex-nowrap items-center gap-2" style={{ animationDelay: "200ms" }}>
             <a
               href="#visit"
               className="inline-flex h-11 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-pine px-3 text-xs font-semibold text-cream sm:h-12 sm:px-6 sm:text-sm"
@@ -41,7 +41,8 @@ function Home() {
           <img
             src="/images/mark.png?v=3"
             alt="Travel Fitness LLC logo"
-            className="w-full max-w-md"
+            className="hero-rise w-full max-w-md"
+            style={{ animationDelay: "120ms" }}
             width={446}
             height={360}
           />
