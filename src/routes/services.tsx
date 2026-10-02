@@ -2,6 +2,7 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { cities } from "@/data/content";
 import { InquiryForm } from "@/components/inquiry-form";
 import { RatesTable } from "@/components/rates-table";
+import { Reveal } from "@/components/reveal";
 import { SiteFrame } from "@/components/site-frame";
 
 export const Route = createFileRoute("/services")({ component: Services });
@@ -61,9 +62,9 @@ function Services() {
       </section>
 
       <section className="mx-auto grid max-w-6xl gap-6 px-5 py-12 md:py-16">
-        {offers.map((offer) => (
+        {offers.map((offer, index) => (
+          <Reveal key={offer.title} delay={index * 70}>
           <article
-            key={offer.title}
             className="grid overflow-hidden rounded-card border border-line bg-cream md:grid-cols-2"
           >
             <img
@@ -87,6 +88,7 @@ function Services() {
               </ul>
             </div>
           </article>
+          </Reveal>
         ))}
       </section>
 

@@ -101,3 +101,22 @@ button.rounded-full.bg-cream:hover {
   color: #fff;
   border-color: #000;
 }
+
+.reveal-wait {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.reveal-in {
+  animation: rise-in 0.6s ease both;
+}
+
+@keyframes photo-zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.03); }
+}
+
+.photo-zoom {
+  animation: photo-zoom 8s ease-out both;
+  transform-origin: center;
+}

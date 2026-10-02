@@ -2,6 +2,7 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { cities, email, phoneDisplay, phoneHref } from "@/data/content";
 import { InquiryForm } from "@/components/inquiry-form";
 import { RatesTable } from "@/components/rates-table";
+import { Reveal } from "@/components/reveal";
 import { SiteFrame } from "@/components/site-frame";
 
 export const Route = createFileRoute("/")({ component: Home });
@@ -55,24 +56,28 @@ function Home() {
             ["Find what moves you", "Customized workout plans and virtual coaching sessions."],
             ["1-on-1 training", "Your home, or Lawndale Swim & Tennis Club. Equipment comes with the trainer."],
             ["Partner & group", "Expert guidance at a lower rate, with room to train together."],
-          ].map(([title, copy]) => (
-            <article key={title} className="border-t border-foam/30 pt-4 text-center">
-              <h2 className="font-display text-2xl">{title}</h2>
-              <p className="mt-2 text-sm text-cream">{copy}</p>
-            </article>
+          ].map(([title, copy], index) => (
+            <Reveal key={title} delay={index * 80}>
+              <article className="border-t border-foam/30 pt-4 text-center">
+                <h2 className="font-display text-2xl">{title}</h2>
+                <p className="mt-2 text-sm text-cream">{copy}</p>
+              </article>
+            </Reveal>
           ))}
         </div>
       </section>
 
       <section className="mx-auto grid max-w-6xl items-center gap-8 px-5 py-14 md:grid-cols-2 md:py-20">
-        <img
-          src="/images/grayson.jpg?v=7"
-          alt="Grayson Brown with his dog"
-          className="w-full rounded-card"
-          width={513}
-          height={510}
-        />
-        <div>
+        <Reveal zoom>
+          <img
+            src="/images/grayson.jpg?v=7"
+            alt="Grayson Brown with his dog"
+            className="w-full"
+            width={513}
+            height={510}
+          />
+        </Reveal>
+        <Reveal delay={80}>
           <p className="text-sm font-semibold uppercase tracking-widest text-pine">Coach</p>
           <h2 className="mt-3 font-display text-4xl">Grayson Brown</h2>
           <p className="mt-1 text-muted">Owner / Personal Trainer · NASM CPT · CPR/AED</p>
@@ -87,12 +92,12 @@ function Home() {
           >
             About Grayson
           </Link>
-        </div>
+        </Reveal>
       </section>
 
       <section className="border-y border-line bg-cream">
         <div className="mx-auto grid max-w-6xl items-start gap-8 px-5 py-14 md:grid-cols-2 md:py-16">
-          <div>
+          <Reveal>
             <h2 className="font-display text-4xl">Straightforward session rates.</h2>
             <p className="mt-4 text-muted">
               Private, semi-private, or group. Thirty or sixty minutes. No
@@ -104,8 +109,10 @@ function Home() {
             >
               Services
             </Link>
-          </div>
-          <RatesTable />
+          </Reveal>
+          <Reveal delay={80}>
+            <RatesTable />
+          </Reveal>
         </div>
       </section>
 

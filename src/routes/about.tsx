@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Reveal } from "@/components/reveal";
 import { SiteFrame } from "@/components/site-frame";
 import { bio } from "@/data/content";
 
@@ -9,13 +10,15 @@ function About() {
     <SiteFrame>
       <article className="mx-auto grid max-w-6xl gap-10 px-5 py-12 md:grid-cols-12 md:py-16">
         <div className="order-2 md:order-1 md:col-span-5">
-          <img
-            src="/images/grayson.jpg?v=7"
-            alt="Grayson Brown with his dog"
-            className="w-full rounded-card"
-            width={513}
-            height={510}
-          />
+          <Reveal zoom>
+            <img
+              src="/images/grayson.jpg?v=7"
+              alt="Grayson Brown with his dog"
+              className="w-full"
+              width={513}
+              height={510}
+            />
+          </Reveal>
         </div>
         <div className="order-1 md:order-2 md:col-span-7">
           <p className="text-sm font-semibold uppercase tracking-widest text-pine">About</p>
