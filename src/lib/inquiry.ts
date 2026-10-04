@@ -2,9 +2,6 @@ import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { email } from "@/data/content";
 
-/** Test inbox only. Public contact address stays in content.ts. */
-const formRecipient = "rhebrown22@gmail.com";
-
 export const inquirySchema = z.object({
   name: z.string().trim().min(2, "Add your name."),
   email: z.string().trim().regex(/^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/, "Enter a valid email, like name@email.com."),
@@ -19,7 +16,7 @@ export type Inquiry = z.infer<typeof inquirySchema>;
 export const submitInquiry = createServerFn({ method: "POST" })
   .validator((data: unknown) => inquirySchema.parse(data))
   .handler(async ({ data }) => {
-    const response = await fetch(`https://formsubmit.co/ajax/${formRecipient}`, {
+    const response = await fetch(`https://formsubmit.co/ajax/${email}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -45,7 +42,7 @@ export const submitInquiry = createServerFn({ method: "POST" })
     } | null;
 
     const accepted = response.ok && (body?.success === true || body?.success === "true");
-    if (accepted) return { ok: true as const, sentTo: formRecipient };
+    if (accepted) return { ok: true as const, sentTo: email };
 
     const message = body?.message ?? "";
     if (/activation/i.test(message)) return { ok: false as const, reason: "activation" as const };

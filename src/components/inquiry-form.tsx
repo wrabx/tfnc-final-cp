@@ -68,7 +68,7 @@ export function InquiryForm() {
     setPending(true);
     setFormError(null);
     try {
-      const response = await fetch(`https://formsubmit.co/ajax/rhebrown22@gmail.com`, {
+      const response = await fetch(`https://formsubmit.co/ajax/${email}`, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
@@ -93,7 +93,7 @@ export function InquiryForm() {
       }
       const detail = body?.message ?? `FormSubmit returned ${response.status}.`;
       if (/activat/i.test(detail)) {
-        setFormError("FormSubmit needs a one-time confirmation. Check rhebrown22@gmail.com, including spam, click Activate Form, then send this request again.");
+        setFormError("FormSubmit needs a one-time confirmation. Check travelfitness@gmail.com, including spam, click Activate Form, then send this request again.");
       } else if (response.status === 429 || /rate limit/i.test(detail)) {
         setFormError("FormSubmit is rate-limiting this inbox. Wait a few minutes, then send again.");
       } else {
@@ -111,7 +111,7 @@ export function InquiryForm() {
       <div className="rounded-card border border-line bg-paper p-6">
         <h3 className="font-display text-3xl">Sent, {sent.name.split(" ")[0]}.</h3>
         <p className="mt-3 text-muted">
-          Test send only. This request went to rhebrown22@gmail.com. Check that inbox and spam. You can also call {phoneDisplay}.
+          This request went to {email}. Grayson will be in touch. You can also call {phoneDisplay}.
         </p>
         <pre className="mt-5 overflow-x-auto rounded-xl bg-cream p-4 text-sm leading-relaxed">
           {message(sent)}
