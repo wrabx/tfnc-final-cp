@@ -1,0 +1,318 @@
+2026-10-04T17:31:11.949Z	Initializing build environment...
+2026-10-04T17:31:13.874Z	Success: Finished initializing build environment
+2026-10-04T17:31:14.706Z	Cloning repository...
+2026-10-04T17:31:16.586Z	Restoring from dependencies cache
+2026-10-04T17:31:16.588Z	Restoring from build output cache
+2026-10-04T17:31:16.593Z	Detected the following tools from environment: npm@10.9.2, nodejs@24.18.0
+2026-10-04T17:31:16.999Z	Installing project dependencies: npm clean-install --progress=false
+2026-10-04T17:31:28.000Z	npm warn deprecated recharts@2.15.4: 1.x and 2.x branches are no longer active. Bump to Recharts v3 to receive latest features and bugfixes. See https://github.com/recharts/recharts/wiki/3.0-migration-guide
+2026-10-04T17:31:28.394Z	npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-10-04T17:31:30.831Z	
+2026-10-04T17:31:30.832Z	added 423 packages in 13s
+2026-10-04T17:31:30.832Z	
+2026-10-04T17:31:30.832Z	94 packages are looking for funding
+2026-10-04T17:31:30.832Z	  run `npm fund` for details
+2026-10-04T17:31:31.149Z	Executing user build command: npx vite build
+2026-10-04T17:31:36.237Z	vite v8.3.1 building client environment for production...
+2026-10-04T17:31:36.266Z	transforming...
+2026-10-04T17:31:37.023Z	✓ 1865 modules transformed.
+2026-10-04T17:31:37.129Z	rendering chunks...
+2026-10-04T17:31:37.243Z	computing gzip size...
+2026-10-04T17:31:37.251Z	dist/assets/styles-DE51wv7l.css       31.81 kB │ gzip:   6.79 kB
+2026-10-04T17:31:37.252Z	dist/assets/about-DYpdQgHZ.js          1.49 kB │ gzip:   0.73 kB
+2026-10-04T17:31:37.252Z	dist/assets/services-DvSztcgg.js       3.69 kB │ gzip:   1.50 kB
+2026-10-04T17:31:37.252Z	dist/assets/routes-kIBKfHoK.js         5.00 kB │ gzip:   1.66 kB
+2026-10-04T17:31:37.252Z	dist/assets/site-frame-gjwHIQez.js     8.61 kB │ gzip:   3.41 kB
+2026-10-04T17:31:37.252Z	dist/assets/rates-table-V3CVCEKX.js   11.36 kB │ gzip:   4.37 kB
+2026-10-04T17:31:37.252Z	dist/assets/index-J43iFmj3.js        432.88 kB │ gzip: 135.95 kB
+2026-10-04T17:31:37.252Z	
+2026-10-04T17:31:37.258Z	✓ built in 1.02s
+2026-10-04T17:31:37.259Z	vite v8.3.1 building ssr environment for production...
+2026-10-04T17:31:37.275Z	transforming...
+2026-10-04T17:31:37.536Z	✓ 80 modules transformed.
+2026-10-04T17:31:37.547Z	rendering chunks...
+2026-10-04T17:31:37.579Z	computing gzip size...
+2026-10-04T17:31:37.582Z	node_modules/.nitro/vite/services/ssr/assets/styles-DVyNs0GZ.css                     32.09 kB │ gzip:  6.82 kB
+2026-10-04T17:31:37.583Z	node_modules/.nitro/vite/services/ssr/assets/start-5Z2QO8AU.js                        0.14 kB │ gzip:  0.13 kB
+2026-10-04T17:31:37.583Z	node_modules/.nitro/vite/services/ssr/assets/empty-plugin-adapters-D9UWiqvJ.js        0.22 kB │ gzip:  0.16 kB
+2026-10-04T17:31:37.584Z	node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-B1oEpR_n.js   1.00 kB │ gzip:  0.41 kB
+2026-10-04T17:31:37.584Z	node_modules/.nitro/vite/services/ssr/assets/about-CX8G8Zsu.js                        2.20 kB │ gzip:  0.92 kB
+2026-10-04T17:31:37.584Z	node_modules/.nitro/vite/services/ssr/assets/inquiry-anxqidmr.js                      2.43 kB │ gzip:  1.19 kB
+2026-10-04T17:31:37.584Z	node_modules/.nitro/vite/services/ssr/assets/services-Byz698fs.js                     5.01 kB │ gzip:  1.80 kB
+2026-10-04T17:31:37.585Z	node_modules/.nitro/vite/services/ssr/assets/routes-DIZBeOQ3.js                       6.91 kB │ gzip:  1.97 kB
+2026-10-04T17:31:37.587Z	node_modules/.nitro/vite/services/ssr/assets/rates-table-B7hvl4YB.js                 11.67 kB │ gzip:  3.66 kB
+2026-10-04T17:31:37.587Z	node_modules/.nitro/vite/services/ssr/assets/site-frame-DKkyMlUe.js                  11.75 kB │ gzip:  3.90 kB
+2026-10-04T17:31:37.587Z	node_modules/.nitro/vite/services/ssr/assets/router-BTGdLuK5.js                      14.18 kB │ gzip:  4.67 kB
+2026-10-04T17:31:37.587Z	node_modules/.nitro/vite/services/ssr/index.js                                       75.95 kB │ gzip: 19.25 kB
+2026-10-04T17:31:37.587Z	
+2026-10-04T17:31:37.588Z	✓ built in 323ms
+2026-10-04T17:31:37.588Z	[start] [nitro] Building [Nitro] (preset: `cloudflare-pages`, compatibility: `2026-10-04`)
+2026-10-04T17:31:37.604Z	[success] [nitro] Generated public dist
+2026-10-04T17:31:37.604Z	vite v8.3.1 building nitro environment for production...
+2026-10-04T17:31:37.608Z	[warn] `inlineDynamicImports` option is ignored because the `codeSplitting` option is specified.
+2026-10-04T17:31:37.608Z	`output.codeSplitting.groups[0].name` is a function. Set `output.codeSplitting.groups[0].debugName` so the bundler timing report can identify this group.
+2026-10-04T17:31:37.616Z	transforming...
+2026-10-04T17:31:37.908Z	✓ 1904 modules transformed.
+2026-10-04T17:31:37.994Z	rendering chunks...
+2026-10-04T17:31:38.085Z	computing gzip size...
+2026-10-04T17:31:38.093Z	dist/_worker.js/_ssr/start-5Z2QO8AU.mjs                    0.14 kB │ gzip:   0.13 kB
+2026-10-04T17:31:38.094Z	dist/_worker.js/_ssr/empty-plugin-adapters-D9UWiqvJ.mjs    0.23 kB │ gzip:   0.16 kB
+2026-10-04T17:31:38.094Z	dist/_worker.js/_chunks/ssr-renderer.mjs                   0.96 kB │ gzip:   0.49 kB
+2026-10-04T17:31:38.095Z	dist/_worker.js/_tanstack-start-manifest_v-B1oEpR_n.mjs    1.06 kB │ gzip:   0.44 kB
+2026-10-04T17:31:38.095Z	dist/_worker.js/_runtime.mjs                               1.44 kB │ gzip:   0.67 kB
+2026-10-04T17:31:38.095Z	dist/_worker.js/_ssr/inquiry-anxqidmr.mjs                  2.38 kB │ gzip:   1.18 kB
+2026-10-04T17:31:38.095Z	dist/_worker.js/_ssr/about-CX8G8Zsu.mjs                    2.61 kB │ gzip:   0.98 kB
+2026-10-04T17:31:38.095Z	dist/_worker.js/_libs/lucide-react.mjs                     4.25 kB │ gzip:   1.41 kB
+2026-10-04T17:31:38.095Z	dist/_worker.js/_ssr/services-Byz698fs.mjs                 5.71 kB │ gzip:   1.86 kB
+2026-10-04T17:31:38.095Z	dist/_worker.js/_ssr/routes-DIZBeOQ3.mjs                   8.07 kB │ gzip:   2.04 kB
+2026-10-04T17:31:38.095Z	dist/_worker.js/_libs/h3-v2+rou3.mjs                       9.83 kB │ gzip:   3.05 kB
+2026-10-04T17:31:38.096Z	dist/_worker.js/_libs/tanstack__history.mjs               12.50 kB │ gzip:   3.70 kB
+2026-10-04T17:31:38.096Z	dist/_worker.js/_ssr/rates-table-B7hvl4YB.mjs             12.82 kB │ gzip:   3.73 kB
+2026-10-04T17:31:38.096Z	dist/_worker.js/_ssr/site-frame-DKkyMlUe.mjs              13.08 kB │ gzip:   4.00 kB
+2026-10-04T17:31:38.096Z	dist/_worker.js/_libs/h3+rou3+srvx.mjs                    14.24 kB │ gzip:   4.24 kB
+2026-10-04T17:31:38.096Z	dist/_worker.js/_ssr/router-BTGdLuK5.mjs                  14.40 kB │ gzip:   4.76 kB
+2026-10-04T17:31:38.096Z	dist/_worker.js/_libs/@tanstack/router-core+[...].mjs     29.60 kB │ gzip:   7.98 kB
+2026-10-04T17:31:38.096Z	dist/_worker.js/index.js                                  37.64 kB │ gzip:  11.47 kB
+2026-10-04T17:31:38.096Z	dist/_worker.js/_ssr/ssr.mjs                              74.23 kB │ gzip:  19.19 kB
+2026-10-04T17:31:38.097Z	dist/_worker.js/_libs/zod.mjs                            167.56 kB │ gzip:  37.36 kB
+2026-10-04T17:31:38.097Z	dist/_worker.js/_libs/@tanstack/react-router+[...].mjs   804.78 kB │ gzip: 170.09 kB
+2026-10-04T17:31:38.098Z	
+2026-10-04T17:31:38.099Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/index.js" may not be preserved when bundling.
+2026-10-04T17:31:38.100Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/index.js:1:1 ]
+2026-10-04T17:31:38.100Z	   │
+2026-10-04T17:31:38.100Z	 1 │ "use client";
+2026-10-04T17:31:38.100Z	   │ ──────┬──────  
+2026-10-04T17:31:38.103Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.103Z	   │ 
+2026-10-04T17:31:38.104Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.104Z	───╯
+2026-10-04T17:31:38.104Z	
+2026-10-04T17:31:38.104Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/useMatch.js" may not be preserved when bundling.
+2026-10-04T17:31:38.104Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/useMatch.js:1:1 ]
+2026-10-04T17:31:38.104Z	   │
+2026-10-04T17:31:38.104Z	 1 │ "use client";
+2026-10-04T17:31:38.104Z	   │ ──────┬──────  
+2026-10-04T17:31:38.104Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.104Z	   │ 
+2026-10-04T17:31:38.104Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.104Z	───╯
+2026-10-04T17:31:38.104Z	
+2026-10-04T17:31:38.104Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/RouterProvider.js" may not be preserved when bundling.
+2026-10-04T17:31:38.105Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/RouterProvider.js:1:1 ]
+2026-10-04T17:31:38.106Z	   │
+2026-10-04T17:31:38.106Z	 1 │ "use client";
+2026-10-04T17:31:38.106Z	   │ ──────┬──────  
+2026-10-04T17:31:38.106Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.106Z	   │ 
+2026-10-04T17:31:38.106Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.106Z	───╯
+2026-10-04T17:31:38.106Z	
+2026-10-04T17:31:38.106Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/useBlocker.js" may not be preserved when bundling.
+2026-10-04T17:31:38.107Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/useBlocker.js:1:1 ]
+2026-10-04T17:31:38.107Z	   │
+2026-10-04T17:31:38.107Z	 1 │ "use client";
+2026-10-04T17:31:38.107Z	   │ ──────┬──────  
+2026-10-04T17:31:38.107Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.107Z	   │ 
+2026-10-04T17:31:38.107Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.107Z	───╯
+2026-10-04T17:31:38.107Z	
+2026-10-04T17:31:38.108Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/useRouterState.js" may not be preserved when bundling.
+2026-10-04T17:31:38.108Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/useRouterState.js:1:1 ]
+2026-10-04T17:31:38.108Z	   │
+2026-10-04T17:31:38.108Z	 1 │ "use client";
+2026-10-04T17:31:38.108Z	   │ ──────┬──────  
+2026-10-04T17:31:38.108Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.109Z	   │ 
+2026-10-04T17:31:38.109Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.109Z	───╯
+2026-10-04T17:31:38.109Z	
+2026-10-04T17:31:38.109Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/Match.js" may not be preserved when bundling.
+2026-10-04T17:31:38.109Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/Match.js:1:1 ]
+2026-10-04T17:31:38.109Z	   │
+2026-10-04T17:31:38.109Z	 1 │ "use client";
+2026-10-04T17:31:38.110Z	   │ ──────┬──────  
+2026-10-04T17:31:38.110Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.110Z	   │ 
+2026-10-04T17:31:38.112Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.112Z	───╯
+2026-10-04T17:31:38.112Z	
+2026-10-04T17:31:38.112Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/Asset.js" may not be preserved when bundling.
+2026-10-04T17:31:38.112Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/Asset.js:1:1 ]
+2026-10-04T17:31:38.112Z	   │
+2026-10-04T17:31:38.112Z	 1 │ "use client";
+2026-10-04T17:31:38.112Z	   │ ──────┬──────  
+2026-10-04T17:31:38.112Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.112Z	   │ 
+2026-10-04T17:31:38.113Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.113Z	───╯
+2026-10-04T17:31:38.113Z	
+2026-10-04T17:31:38.113Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/HeadContent.js" may not be preserved when bundling.
+2026-10-04T17:31:38.113Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/HeadContent.js:1:1 ]
+2026-10-04T17:31:38.118Z	   │
+2026-10-04T17:31:38.118Z	 1 │ "use client";
+2026-10-04T17:31:38.118Z	   │ ──────┬──────  
+2026-10-04T17:31:38.118Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.118Z	   │ 
+2026-10-04T17:31:38.118Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.118Z	───╯
+2026-10-04T17:31:38.119Z	
+2026-10-04T17:31:38.119Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/Matches.js" may not be preserved when bundling.
+2026-10-04T17:31:38.119Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/Matches.js:1:1 ]
+2026-10-04T17:31:38.119Z	   │
+2026-10-04T17:31:38.119Z	 1 │ "use client";
+2026-10-04T17:31:38.119Z	   │ ──────┬──────  
+2026-10-04T17:31:38.119Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.119Z	   │ 
+2026-10-04T17:31:38.120Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.120Z	───╯
+2026-10-04T17:31:38.120Z	
+2026-10-04T17:31:38.120Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/Transitioner.js" may not be preserved when bundling.
+2026-10-04T17:31:38.120Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/Transitioner.js:1:1 ]
+2026-10-04T17:31:38.120Z	   │
+2026-10-04T17:31:38.120Z	 1 │ "use client";
+2026-10-04T17:31:38.120Z	   │ ──────┬──────  
+2026-10-04T17:31:38.120Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.120Z	   │ 
+2026-10-04T17:31:38.120Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.120Z	───╯
+2026-10-04T17:31:38.120Z	
+2026-10-04T17:31:38.120Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/useNavigate.js" may not be preserved when bundling.
+2026-10-04T17:31:38.121Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/useNavigate.js:1:1 ]
+2026-10-04T17:31:38.121Z	   │
+2026-10-04T17:31:38.121Z	 1 │ "use client";
+2026-10-04T17:31:38.121Z	   │ ──────┬──────  
+2026-10-04T17:31:38.121Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.121Z	   │ 
+2026-10-04T17:31:38.121Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.121Z	───╯
+2026-10-04T17:31:38.121Z	
+2026-10-04T17:31:38.121Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/link.js" may not be preserved when bundling.
+2026-10-04T17:31:38.121Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/link.js:1:1 ]
+2026-10-04T17:31:38.121Z	   │
+2026-10-04T17:31:38.121Z	 1 │ "use client";
+2026-10-04T17:31:38.121Z	   │ ──────┬──────  
+2026-10-04T17:31:38.121Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.121Z	   │ 
+2026-10-04T17:31:38.122Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.122Z	───╯
+2026-10-04T17:31:38.122Z	
+2026-10-04T17:31:38.122Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/routerContext.js" may not be preserved when bundling.
+2026-10-04T17:31:38.122Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/routerContext.js:1:1 ]
+2026-10-04T17:31:38.122Z	   │
+2026-10-04T17:31:38.122Z	 1 │ "use client";
+2026-10-04T17:31:38.122Z	   │ ──────┬──────  
+2026-10-04T17:31:38.122Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.122Z	   │ 
+2026-10-04T17:31:38.122Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.122Z	───╯
+2026-10-04T17:31:38.122Z	
+2026-10-04T17:31:38.122Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/useLocation.js" may not be preserved when bundling.
+2026-10-04T17:31:38.122Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/useLocation.js:1:1 ]
+2026-10-04T17:31:38.122Z	   │
+2026-10-04T17:31:38.122Z	 1 │ "use client";
+2026-10-04T17:31:38.123Z	   │ ──────┬──────  
+2026-10-04T17:31:38.123Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.123Z	   │ 
+2026-10-04T17:31:38.123Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.123Z	───╯
+2026-10-04T17:31:38.123Z	
+2026-10-04T17:31:38.127Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/matchContext.js" may not be preserved when bundling.
+2026-10-04T17:31:38.128Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/matchContext.js:1:1 ]
+2026-10-04T17:31:38.128Z	   │
+2026-10-04T17:31:38.128Z	 1 │ "use client";
+2026-10-04T17:31:38.128Z	   │ ──────┬──────  
+2026-10-04T17:31:38.129Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.129Z	   │ 
+2026-10-04T17:31:38.129Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.129Z	───╯
+2026-10-04T17:31:38.129Z	
+2026-10-04T17:31:38.129Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/nonRouteComponentContext.js" may not be preserved when bundling.
+2026-10-04T17:31:38.129Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/nonRouteComponentContext.js:1:1 ]
+2026-10-04T17:31:38.129Z	   │
+2026-10-04T17:31:38.130Z	 1 │ "use client";
+2026-10-04T17:31:38.130Z	   │ ──────┬──────  
+2026-10-04T17:31:38.130Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.130Z	   │ 
+2026-10-04T17:31:38.131Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.131Z	───╯
+2026-10-04T17:31:38.131Z	
+2026-10-04T17:31:38.131Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/utils.js" may not be preserved when bundling.
+2026-10-04T17:31:38.131Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/utils.js:1:1 ]
+2026-10-04T17:31:38.131Z	   │
+2026-10-04T17:31:38.131Z	 1 │ "use client";
+2026-10-04T17:31:38.131Z	   │ ──────┬──────  
+2026-10-04T17:31:38.131Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.131Z	   │ 
+2026-10-04T17:31:38.131Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.131Z	───╯
+2026-10-04T17:31:38.132Z	
+2026-10-04T17:31:38.132Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/useRouter.js" may not be preserved when bundling.
+2026-10-04T17:31:38.132Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/useRouter.js:1:1 ]
+2026-10-04T17:31:38.132Z	   │
+2026-10-04T17:31:38.132Z	 1 │ "use client";
+2026-10-04T17:31:38.132Z	   │ ──────┬──────  
+2026-10-04T17:31:38.132Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.132Z	   │ 
+2026-10-04T17:31:38.136Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.136Z	───╯
+2026-10-04T17:31:38.136Z	
+2026-10-04T17:31:38.137Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/CatchBoundary.js" may not be preserved when bundling.
+2026-10-04T17:31:38.137Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/CatchBoundary.js:1:1 ]
+2026-10-04T17:31:38.137Z	   │
+2026-10-04T17:31:38.137Z	 1 │ "use client";
+2026-10-04T17:31:38.137Z	   │ ──────┬──────  
+2026-10-04T17:31:38.137Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.137Z	   │ 
+2026-10-04T17:31:38.137Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.137Z	───╯
+2026-10-04T17:31:38.137Z	
+2026-10-04T17:31:38.137Z	[MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/@tanstack/react-router/dist/esm/ClientOnly.js" may not be preserved when bundling.
+2026-10-04T17:31:38.138Z	   ╭─[ node_modules/@tanstack/react-router/dist/esm/ClientOnly.js:1:1 ]
+2026-10-04T17:31:38.138Z	   │
+2026-10-04T17:31:38.138Z	 1 │ "use client";
+2026-10-04T17:31:38.138Z	   │ ──────┬──────  
+2026-10-04T17:31:38.138Z	   │       ╰──────── module level directive may not be preserved
+2026-10-04T17:31:38.138Z	   │ 
+2026-10-04T17:31:38.138Z	   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+2026-10-04T17:31:38.138Z	───╯
+2026-10-04T17:31:38.140Z	
+2026-10-04T17:31:38.140Z	[warn] [nitro] [cloudflare] Wrangler config `pages_build_output_dir` is overridden and will be ignored.
+2026-10-04T17:31:38.141Z	✓ built in 493ms
+2026-10-04T17:31:38.141Z	[info] Generated dist/_worker.js/wrangler.json
+2026-10-04T17:31:38.141Z	[info] Generated .wrangler/deploy/config.json
+2026-10-04T17:31:38.141Z	[info] Generated dist/_routes.json
+2026-10-04T17:31:38.141Z	[info] Generated dist/_headers
+2026-10-04T17:31:38.141Z	[info] Generated dist/_redirects
+2026-10-04T17:31:38.141Z	[info] Generated dist/nitro.json
+2026-10-04T17:31:38.141Z	[success] [nitro] You can preview this build using `npx vite preview`
+2026-10-04T17:31:38.141Z	[success] [nitro] You can deploy this build using `npx nitro deploy --prebuilt`
+2026-10-04T17:31:38.240Z	Success: Build command completed
+2026-10-04T17:31:38.478Z	Executing user deploy command: npx wrangler pages deploy dist
+2026-10-04T17:31:39.696Z	npm warn exec The following package was not found and will be installed: wrangler@4.147.0
+2026-10-04T17:31:46.975Z	
+2026-10-04T17:31:46.975Z	 ⛅️ wrangler 4.147.0
+2026-10-04T17:31:46.975Z	────────────────────
+2026-10-04T17:31:47.384Z	
+2026-10-04T17:31:47.472Z	✘ [ERROR] A request to the Cloudflare API (/accounts/20ff174cbb86774d063d1d67711b5943/pages/projects/travel-fitness) failed.
+2026-10-04T17:31:47.472Z	
+2026-10-04T17:31:47.473Z	  Authentication error [code: 10000]
+2026-10-04T17:31:47.473Z	  To learn more about this error, visit: https://developers.cloudflare.com/api/resources/pages
+2026-10-04T17:31:47.473Z	
+2026-10-04T17:31:47.473Z	
+2026-10-04T17:31:47.475Z	📎 It looks like you are authenticating Wrangler via a custom API token set in an environment variable.
+2026-10-04T17:31:47.475Z	Please ensure it has the correct permissions for this operation.
+2026-10-04T17:31:47.475Z	
+2026-10-04T17:31:47.475Z	Getting User settings...
+2026-10-04T17:31:48.237Z	👋 You are logged in with an User API Token, associated with the email gmeisme@protonmail.com.
+2026-10-04T17:31:48.237Z	ℹ️  The API Token is read from the CLOUDFLARE_API_TOKEN environment variable.
+2026-10-04T17:31:48.242Z	┌──────────────────────────────────┬──────────────────────────────────┐
+2026-10-04T17:31:48.242Z	│ Account Name                     │ Account ID                       │
+2026-10-04T17:31:48.242Z	├──────────────────────────────────┼──────────────────────────────────┤
+2026-10-04T17:31:48.242Z	│ Gmeisme@protonmail.com's Account │ 20ff174cbb86774d063d1d67711b5943 │
+2026-10-04T17:31:48.242Z	└──────────────────────────────────┴──────────────────────────────────┘
+2026-10-04T17:31:48.242Z	🔓 To see token permissions visit https://dash.cloudflare.com/profile/api-tokens
+2026-10-04T17:31:48.415Z	🎢 Membership roles in "Gmeisme@protonmail.com's Account": Contact account super admin to change your permissions.
+2026-10-04T17:31:48.415Z	- Super Administrator - All Privileges
+2026-10-04T17:31:48.417Z	🪵  Logs were written to "/opt/buildhome/.config/.wrangler/logs/wrangler-2026-10-04_17-31-46_610.log"
+2026-10-04T17:31:48.485Z	Failed: error occurred while running deploy command
