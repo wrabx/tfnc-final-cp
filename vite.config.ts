@@ -170,7 +170,9 @@ export default defineConfig(({ command, isPreview }) => ({
     ...(command === "build" || isPreview
       ? [
           nitro({
-            preset: "cloudflare-module",
+            // Grok publish expects the Vercel preset and a dist folder.
+            // Cloudflare builds set NITRO_PRESET=cloudflare-module.
+            preset: process.env.NITRO_PRESET === "cloudflare-module" ? "cloudflare-module" : "vercel",
             serverDir: "./server",
             cloudflare: {
               deployConfig: true,
